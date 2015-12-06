@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC668FAB1C14F9FF00944277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FAA1C14F9FF00944277 /* main.m */; };
+		CC668FAE1C14F9FF00944277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FAD1C14F9FF00944277 /* AppDelegate.m */; };
+		CC668FB11C14F9FF00944277 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FB01C14F9FF00944277 /* ViewController.m */; };
+		CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC668FB21C14F9FF00944277 /* Main.storyboard */; };
+		CC668FB71C14F9FF00944277 /* PerfectDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC668FB51C14F9FF00944277 /* PerfectDay.xcdatamodeld */; };
+		CC668FB91C14F9FF00944277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC668FB81C14F9FF00944277 /* Assets.xcassets */; };
+		CC668FBC1C14F9FF00944277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC668FBA1C14F9FF00944277 /* LaunchScreen.storyboard */; };
+		CC668FC71C14F9FF00944277 /* PerfectDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FC61C14F9FF00944277 /* PerfectDayTests.m */; };
+		CC668FD21C14F9FF00944277 /* PerfectDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FD11C14F9FF00944277 /* PerfectDayUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC668FC31C14F9FF00944277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC668F9E1C14F9FF00944277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC668FA51C14F9FF00944277;
+			remoteInfo = PerfectDay;
+		};
+		CC668FCE1C14F9FF00944277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC668F9E1C14F9FF00944277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC668FA51C14F9FF00944277;
+			remoteInfo = PerfectDay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC668FA61C14F9FF00944277 /* PerfectDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC668FAA1C14F9FF00944277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC668FAC1C14F9FF00944277 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC668FAD1C14F9FF00944277 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC668FAF1C14F9FF00944277 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC668FB01C14F9FF00944277 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC668FB31C14F9FF00944277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC668FB61C14F9FF00944277 /* PerfectDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PerfectDay.xcdatamodel; sourceTree = "<group>"; };
+		CC668FB81C14F9FF00944277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC668FBB1C14F9FF00944277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC668FBD1C14F9FF00944277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC668FC21C14F9FF00944277 /* PerfectDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC668FC61C14F9FF00944277 /* PerfectDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfectDayTests.m; sourceTree = "<group>"; };
+		CC668FC81C14F9FF00944277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC668FCD1C14F9FF00944277 /* PerfectDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC668FD11C14F9FF00944277 /* PerfectDayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfectDayUITests.m; sourceTree = "<group>"; };
+		CC668FD31C14F9FF00944277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC668FA31C14F9FF00944277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FBF1C14F9FF00944277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FCA1C14F9FF00944277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC668F9D1C14F9FF00944277 = {
+			isa = PBXGroup;
+			children = (
+				CC668FA81C14F9FF00944277 /* PerfectDay */,
+				CC668FC51C14F9FF00944277 /* PerfectDayTests */,
+				CC668FD01C14F9FF00944277 /* PerfectDayUITests */,
+				CC668FA71C14F9FF00944277 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC668FA71C14F9FF00944277 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC668FA61C14F9FF00944277 /* PerfectDay.app */,
+				CC668FC21C14F9FF00944277 /* PerfectDayTests.xctest */,
+				CC668FCD1C14F9FF00944277 /* PerfectDayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC668FA81C14F9FF00944277 /* PerfectDay */ = {
+			isa = PBXGroup;
+			children = (
+				CC668FAC1C14F9FF00944277 /* AppDelegate.h */,
+				CC668FAD1C14F9FF00944277 /* AppDelegate.m */,
+				CC668FAF1C14F9FF00944277 /* ViewController.h */,
+				CC668FB01C14F9FF00944277 /* ViewController.m */,
+				CC668FB21C14F9FF00944277 /* Main.storyboard */,
+				CC668FB81C14F9FF00944277 /* Assets.xcassets */,
+				CC668FBA1C14F9FF00944277 /* LaunchScreen.storyboard */,
+				CC668FBD1C14F9FF00944277 /* Info.plist */,
+				CC668FB51C14F9FF00944277 /* PerfectDay.xcdatamodeld */,
+				CC668FA91C14F9FF00944277 /* Supporting Files */,
+			);
+			path = PerfectDay;
+			sourceTree = "<group>";
+		};
+		CC668FA91C14F9FF00944277 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC668FAA1C14F9FF00944277 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC668FC51C14F9FF00944277 /* PerfectDayTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC668FC61C14F9FF00944277 /* PerfectDayTests.m */,
+				CC668FC81C14F9FF00944277 /* Info.plist */,
+			);
+			path = PerfectDayTests;
+			sourceTree = "<group>";
+		};
+		CC668FD01C14F9FF00944277 /* PerfectDayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC668FD11C14F9FF00944277 /* PerfectDayUITests.m */,
+				CC668FD31C14F9FF00944277 /* Info.plist */,
+			);
+			path = PerfectDayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC668FA51C14F9FF00944277 /* PerfectDay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC668FD61C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDay" */;
+			buildPhases = (
+				CC668FA21C14F9FF00944277 /* Sources */,
+				CC668FA31C14F9FF00944277 /* Frameworks */,
+				CC668FA41C14F9FF00944277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfectDay;
+			productName = PerfectDay;
+			productReference = CC668FA61C14F9FF00944277 /* PerfectDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC668FC11C14F9FF00944277 /* PerfectDayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC668FD91C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDayTests" */;
+			buildPhases = (
+				CC668FBE1C14F9FF00944277 /* Sources */,
+				CC668FBF1C14F9FF00944277 /* Frameworks */,
+				CC668FC01C14F9FF00944277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC668FC41C14F9FF00944277 /* PBXTargetDependency */,
+			);
+			name = PerfectDayTests;
+			productName = PerfectDayTests;
+			productReference = CC668FC21C14F9FF00944277 /* PerfectDayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC668FCC1C14F9FF00944277 /* PerfectDayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC668FDC1C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDayUITests" */;
+			buildPhases = (
+				CC668FC91C14F9FF00944277 /* Sources */,
+				CC668FCA1C14F9FF00944277 /* Frameworks */,
+				CC668FCB1C14F9FF00944277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC668FCF1C14F9FF00944277 /* PBXTargetDependency */,
+			);
+			name = PerfectDayUITests;
+			productName = PerfectDayUITests;
+			productReference = CC668FCD1C14F9FF00944277 /* PerfectDayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC668F9E1C14F9FF00944277 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Rachel;
+				TargetAttributes = {
+					CC668FA51C14F9FF00944277 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					CC668FC11C14F9FF00944277 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = CC668FA51C14F9FF00944277;
+					};
+					CC668FCC1C14F9FF00944277 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = CC668FA51C14F9FF00944277;
+					};
+				};
+			};
+			buildConfigurationList = CC668FA11C14F9FF00944277 /* Build configuration list for PBXProject "PerfectDay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC668F9D1C14F9FF00944277;
+			productRefGroup = CC668FA71C14F9FF00944277 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC668FA51C14F9FF00944277 /* PerfectDay */,
+				CC668FC11C14F9FF00944277 /* PerfectDayTests */,
+				CC668FCC1C14F9FF00944277 /* PerfectDayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC668FA41C14F9FF00944277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC668FBC1C14F9FF00944277 /* LaunchScreen.storyboard in Resources */,
+				CC668FB91C14F9FF00944277 /* Assets.xcassets in Resources */,
+				CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FC01C14F9FF00944277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FCB1C14F9FF00944277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC668FA21C14F9FF00944277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC668FB11C14F9FF00944277 /* ViewController.m in Sources */,
+				CC668FAE1C14F9FF00944277 /* AppDelegate.m in Sources */,
+				CC668FB71C14F9FF00944277 /* PerfectDay.xcdatamodeld in Sources */,
+				CC668FAB1C14F9FF00944277 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FBE1C14F9FF00944277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC668FC71C14F9FF00944277 /* PerfectDayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC668FC91C14F9FF00944277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC668FD21C14F9FF00944277 /* PerfectDayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC668FC41C14F9FF00944277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC668FA51C14F9FF00944277 /* PerfectDay */;
+			targetProxy = CC668FC31C14F9FF00944277 /* PBXContainerItemProxy */;
+		};
+		CC668FCF1C14F9FF00944277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC668FA51C14F9FF00944277 /* PerfectDay */;
+			targetProxy = CC668FCE1C14F9FF00944277 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC668FB21C14F9FF00944277 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC668FB31C14F9FF00944277 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC668FBA1C14F9FF00944277 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC668FBB1C14F9FF00944277 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC668FD41C14F9FF00944277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC668FD51C14F9FF00944277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC668FD71C14F9FF00944277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PerfectDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC668FD81C14F9FF00944277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PerfectDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC668FDA1C14F9FF00944277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PerfectDayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectDay.app/PerfectDay";
+			};
+			name = Debug;
+		};
+		CC668FDB1C14F9FF00944277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PerfectDayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectDay.app/PerfectDay";
+			};
+			name = Release;
+		};
+		CC668FDD1C14F9FF00944277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PerfectDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PerfectDay;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CC668FDE1C14F9FF00944277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PerfectDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rachelgrau.PerfectDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PerfectDay;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC668FA11C14F9FF00944277 /* Build configuration list for PBXProject "PerfectDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC668FD41C14F9FF00944277 /* Debug */,
+				CC668FD51C14F9FF00944277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC668FD61C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC668FD71C14F9FF00944277 /* Debug */,
+				CC668FD81C14F9FF00944277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC668FD91C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC668FDA1C14F9FF00944277 /* Debug */,
+				CC668FDB1C14F9FF00944277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC668FDC1C14F9FF00944277 /* Build configuration list for PBXNativeTarget "PerfectDayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC668FDD1C14F9FF00944277 /* Debug */,
+				CC668FDE1C14F9FF00944277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC668FB51C14F9FF00944277 /* PerfectDay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC668FB61C14F9FF00944277 /* PerfectDay.xcdatamodel */,
+			);
+			currentVersion = CC668FB61C14F9FF00944277 /* PerfectDay.xcdatamodel */;
+			path = PerfectDay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC668F9E1C14F9FF00944277 /* Project object */;
+}
