@@ -11,3 +11,4 @@
 /* User table */
 #define USER_EMAIL @"email"
 #define USER_FULL_NAME @"fullName"
+#define USER_PROF_PIC @"profilePicture"

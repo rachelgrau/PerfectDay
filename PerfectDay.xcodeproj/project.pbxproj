@@ -40,6 +40,10 @@
 		CC6690141C1552EE00944277 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6690131C1552EE00944277 /* libsqlite3.tbd */; };
 		CC6690191C15597D00944277 /* mountainousBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6690181C15597D00944277 /* mountainousBackdrop.png */; };
 		CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66901C1C1559AD00944277 /* LogInViewController.m */; };
+		CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */; };
+		CC8DF7C01C1E386A00D7BCF1 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7BF1C1E386A00D7BCF1 /* home.png */; };
+		CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */; };
+		CC8DF7CA1C1E685400D7BCF1 /* addProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */; };
 		CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBCB2BE1C1BE49E005A2DD7 /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +112,11 @@
 		CC6690181C15597D00944277 /* mountainousBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountainousBackdrop.png; sourceTree = "<group>"; };
 		CC66901B1C1559AD00944277 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		CC66901C1C1559AD00944277 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		CC8DF7BF1C1E386A00D7BCF1 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeProfPic.png; sourceTree = "<group>"; };
+		CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addProfPic.png; sourceTree = "<group>"; };
 		CCBCB2BD1C1BE49E005A2DD7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		CCBCB2BE1C1BE49E005A2DD7 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +188,8 @@
 				CC668FE21C14FD5E00944277 /* Images */,
 				CC668FF21C150E9600944277 /* Models */,
 				CC66901A1C15599700944277 /* Log In / Sign Up */,
+				CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */,
+				CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */,
 				CC668FDF1C14FA1900944277 /* HomeViewController.h */,
 				CC668FE01C14FA1900944277 /* HomeViewController.m */,
 				CC668FE91C15080800944277 /* BrowseViewController.h */,
@@ -226,6 +237,9 @@
 		CC668FE21C14FD5E00944277 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */,
+				CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */,
+				CC8DF7BF1C1E386A00D7BCF1 /* home.png */,
 				CC6690181C15597D00944277 /* mountainousBackdrop.png */,
 				CC668FFB1C15361200944277 /* zooey.jpg */,
 				CC668FF61C15106400944277 /* tswift.jpg */,
@@ -380,7 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6690191C15597D00944277 /* mountainousBackdrop.png in Resources */,
+				CC8DF7CA1C1E685400D7BCF1 /* addProfPic.png in Resources */,
+				CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */,
 				CC668FBC1C14F9FF00944277 /* LaunchScreen.storyboard in Resources */,
+				CC8DF7C01C1E386A00D7BCF1 /* home.png in Resources */,
 				CC668FB91C14F9FF00944277 /* Assets.xcassets in Resources */,
 				CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */,
 				CC668FF11C150B6D00944277 /* grayBackButton.png in Resources */,
@@ -421,6 +438,7 @@
 				CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */,
 				CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */,
 				CC668FAB1C14F9FF00944277 /* main.m in Sources */,
+				CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */,
 				CC668FE11C14FA1900944277 /* HomeViewController.m in Sources */,
 				CC668FF51C150EB200944277 /* DayPlan.m in Sources */,
 			);

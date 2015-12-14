@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
 #import "Common.h"
-//#import <Parse/Parse.h>
+#import "ProfileViewController.h"
 
 @interface HomeViewController ()
 
@@ -42,6 +42,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toBrowse"]) {
         // pass current user
+    } else if ([segue.identifier isEqualToString:@"toProfile"]) {
+        ProfileViewController *dest = segue.destinationViewController;
+        dest.userToDisplay = [PFUser currentUser];
     }
 }
 
