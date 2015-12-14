@@ -16,4 +16,8 @@
 + (void)setBorder:(UIView *)view withColor:(UIColor *)color;
 /* Returns a random int between |from| and |to| */
 + (int)getRandomNumberBetween:(int)from to:(int)to;
+/* Returns the navy-ish color used throughout the app */
++ (UIColor *)getNavy;
+/* Returns a list of all options for likes */
++ (NSArray *)getAllLikeOptions;
 @end

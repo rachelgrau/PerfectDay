@@ -10,6 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface ProfileViewController : UIViewController <UIAlertViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate >
+@interface ProfileViewController : UIViewController <UIAlertViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 @property PFUser *userToDisplay;
 @end

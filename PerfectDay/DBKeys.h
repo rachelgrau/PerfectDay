@@ -12,3 +12,5 @@
 #define USER_EMAIL @"email"
 #define USER_FULL_NAME @"fullName"
 #define USER_PROF_PIC @"profilePicture"
+#define USER_HOMETOWN_CITY @"hometownCity"
+#define USER_LIKES @"myLikes" // array

@@ -30,4 +30,14 @@
     return (int)from + arc4random() % (to-from+1);
 }
 
++ (UIColor *)getNavy {
+    return [UIColor colorWithRed:24.f/255.f green:49.f/255.f blue:50.f/255.f alpha:1.0];
+}
+
++ (NSArray *)getAllLikeOptions {
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"coffee", @"books", @"theater", @"soccer", @"basketball", @"football", @"baseball", @"squash", @"volleyball", @"swimming", @"beaches", @"fine dining", @"local eateries", @"hiking", @"running", @"biking", @"history", @"art", @"museums", @"music", @"live music", @"shopping", @"spa", @"bars", @"clubs", @"dancing", @"street art", @"modern art", nil];
+    NSArray *sortedArray = [arr sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return sortedArray;
+}
+
 @end

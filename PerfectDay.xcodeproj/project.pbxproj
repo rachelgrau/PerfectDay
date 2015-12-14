@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2F2BF91C1F68DC00C7138A /* filledCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2F2BF81C1F68DC00C7138A /* filledCircle.png */; };
+		CC2F2BFB1C1F68E100C7138A /* outlineCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */; };
+		CC4B17AA1C1F3F4D005A7AD4 /* friendsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4B17A91C1F3F4D005A7AD4 /* friendsIcon.png */; };
+		CC4B17AC1C1F40C2005A7AD4 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4B17AB1C1F40C2005A7AD4 /* home.png */; };
+		CC4B17B01C1F47A0005A7AD4 /* LikeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B17AF1C1F47A0005A7AD4 /* LikeCollectionViewCell.m */; };
+		CC4B17B31C1F54F6005A7AD4 /* ChooseLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B17B21C1F54F6005A7AD4 /* ChooseLikesView.m */; };
 		CC668FAB1C14F9FF00944277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FAA1C14F9FF00944277 /* main.m */; };
 		CC668FAE1C14F9FF00944277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC668FAD1C14F9FF00944277 /* AppDelegate.m */; };
 		CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC668FB21C14F9FF00944277 /* Main.storyboard */; };
@@ -41,7 +47,6 @@
 		CC6690191C15597D00944277 /* mountainousBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6690181C15597D00944277 /* mountainousBackdrop.png */; };
 		CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66901C1C1559AD00944277 /* LogInViewController.m */; };
 		CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */; };
-		CC8DF7C01C1E386A00D7BCF1 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7BF1C1E386A00D7BCF1 /* home.png */; };
 		CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */; };
 		CC8DF7CA1C1E685400D7BCF1 /* addProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */; };
 		CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBCB2BE1C1BE49E005A2DD7 /* SignUpViewController.m */; };
@@ -65,6 +70,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC2F2BF81C1F68DC00C7138A /* filledCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledCircle.png; sourceTree = "<group>"; };
+		CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outlineCircle.png; sourceTree = "<group>"; };
+		CC4B17A91C1F3F4D005A7AD4 /* friendsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendsIcon.png; sourceTree = "<group>"; };
+		CC4B17AB1C1F40C2005A7AD4 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		CC4B17AE1C1F47A0005A7AD4 /* LikeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeCollectionViewCell.h; sourceTree = "<group>"; };
+		CC4B17AF1C1F47A0005A7AD4 /* LikeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeCollectionViewCell.m; sourceTree = "<group>"; };
+		CC4B17B11C1F54F6005A7AD4 /* ChooseLikesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLikesView.h; sourceTree = "<group>"; };
+		CC4B17B21C1F54F6005A7AD4 /* ChooseLikesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLikesView.m; sourceTree = "<group>"; };
 		CC668FA61C14F9FF00944277 /* PerfectDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC668FAA1C14F9FF00944277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC668FAC1C14F9FF00944277 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,7 +127,6 @@
 		CC66901C1C1559AD00944277 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		CC8DF7BF1C1E386A00D7BCF1 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeProfPic.png; sourceTree = "<group>"; };
 		CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addProfPic.png; sourceTree = "<group>"; };
 		CCBCB2BD1C1BE49E005A2DD7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -158,6 +170,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC2F2BFC1C1F68E700C7138A /* likes */ = {
+			isa = PBXGroup;
+			children = (
+				CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */,
+				CC2F2BF81C1F68DC00C7138A /* filledCircle.png */,
+			);
+			name = likes;
+			sourceTree = "<group>";
+		};
+		CC4B17AD1C1F4789005A7AD4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */,
+				CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */,
+				CC4B17AE1C1F47A0005A7AD4 /* LikeCollectionViewCell.h */,
+				CC4B17AF1C1F47A0005A7AD4 /* LikeCollectionViewCell.m */,
+				CC4B17B11C1F54F6005A7AD4 /* ChooseLikesView.h */,
+				CC4B17B21C1F54F6005A7AD4 /* ChooseLikesView.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		CC668F9D1C14F9FF00944277 = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +222,7 @@
 				CC668FE21C14FD5E00944277 /* Images */,
 				CC668FF21C150E9600944277 /* Models */,
 				CC66901A1C15599700944277 /* Log In / Sign Up */,
-				CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */,
-				CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */,
+				CC4B17AD1C1F4789005A7AD4 /* Profile */,
 				CC668FDF1C14FA1900944277 /* HomeViewController.h */,
 				CC668FE01C14FA1900944277 /* HomeViewController.m */,
 				CC668FE91C15080800944277 /* BrowseViewController.h */,
@@ -237,9 +270,11 @@
 		CC668FE21C14FD5E00944277 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CC2F2BFC1C1F68E700C7138A /* likes */,
+				CC4B17AB1C1F40C2005A7AD4 /* home.png */,
+				CC4B17A91C1F3F4D005A7AD4 /* friendsIcon.png */,
 				CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */,
 				CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */,
-				CC8DF7BF1C1E386A00D7BCF1 /* home.png */,
 				CC6690181C15597D00944277 /* mountainousBackdrop.png */,
 				CC668FFB1C15361200944277 /* zooey.jpg */,
 				CC668FF61C15106400944277 /* tswift.jpg */,
@@ -395,12 +430,15 @@
 			files = (
 				CC6690191C15597D00944277 /* mountainousBackdrop.png in Resources */,
 				CC8DF7CA1C1E685400D7BCF1 /* addProfPic.png in Resources */,
+				CC4B17AC1C1F40C2005A7AD4 /* home.png in Resources */,
+				CC2F2BF91C1F68DC00C7138A /* filledCircle.png in Resources */,
 				CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */,
 				CC668FBC1C14F9FF00944277 /* LaunchScreen.storyboard in Resources */,
-				CC8DF7C01C1E386A00D7BCF1 /* home.png in Resources */,
+				CC2F2BFB1C1F68E100C7138A /* outlineCircle.png in Resources */,
 				CC668FB91C14F9FF00944277 /* Assets.xcassets in Resources */,
 				CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */,
 				CC668FF11C150B6D00944277 /* grayBackButton.png in Resources */,
+				CC4B17AA1C1F3F4D005A7AD4 /* friendsIcon.png in Resources */,
 				CC668FE81C14FD6800944277 /* grayPlane.png in Resources */,
 				CC668FE61C14FD6800944277 /* grayCity.png in Resources */,
 				CC668FE71C14FD6800944277 /* grayHeart.png in Resources */,
@@ -433,10 +471,12 @@
 				CC668FEE1C15081E00944277 /* Common.m in Sources */,
 				CC668FAE1C14F9FF00944277 /* AppDelegate.m in Sources */,
 				CC668FB71C14F9FF00944277 /* PerfectDay.xcdatamodeld in Sources */,
+				CC4B17B31C1F54F6005A7AD4 /* ChooseLikesView.m in Sources */,
 				CC668FEB1C15080800944277 /* BrowseViewController.m in Sources */,
 				CC668FFA1C151CFD00944277 /* PlanTableViewCell.m in Sources */,
 				CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */,
 				CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */,
+				CC4B17B01C1F47A0005A7AD4 /* LikeCollectionViewCell.m in Sources */,
 				CC668FAB1C14F9FF00944277 /* main.m in Sources */,
 				CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */,
 				CC668FE11C14FA1900944277 /* HomeViewController.m in Sources */,
