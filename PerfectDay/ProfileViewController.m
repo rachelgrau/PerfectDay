@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import <MapKit/MapKit.h>
 #import "LikeCollectionViewCell.h"
 #import "ChooseLikesView.h"
 #import "Common.h"
@@ -30,9 +31,16 @@
 // Choose like view
 @property (strong, nonatomic) IBOutlet UICollectionView *chooseLikeCollectionView;
 @property NSMutableArray *editedLikes; // for when they are adding new likes. includes old ones.
-@property NSArray *likeOptions; // all the options for likes
+@property NSArray *allLikeOptions; // all the options for likes
+@property NSArray *likeOptions; // like options currently viewable (e.g. if they search a certain subset)
 @property (strong, nonatomic) IBOutlet UIButton *saveLikesButton;
 @property (strong, nonatomic) IBOutlet UIButton *exitButton;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+// Map View
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+// List View
+@property (strong, nonatomic) IBOutlet UITableView *listTableView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *viewTypeToggle;
 @end
 
 #define CHANGE_PROFILE_PIC_TAG 1
@@ -69,7 +77,6 @@
     }
     
     /* Likes */
-    // temp
     self.likes = [self.userToDisplay objectForKey:USER_LIKES];
     if (!self.likes) {
         self.likes = [[NSArray alloc] init];
@@ -78,6 +85,26 @@
     self.chooseLikesView.hidden = YES;
     self.chooseLikeCollectionView.backgroundColor = [UIColor clearColor];
     [Common setBorder:self.exitButton withColor:[Common getNavy]];
+    
+    /* Search bar */
+    for (UIView *subView in self.searchBar.subviews)
+    {
+        for (UIView *secondLevelSubview in subView.subviews){
+            if ([secondLevelSubview isKindOfClass:[UITextField class]])
+            {
+                UITextField *searchBarTextField = (UITextField *)secondLevelSubview;
+                
+                searchBarTextField.textColor = [Common getNavy];
+                searchBarTextField.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:14.0];
+                
+                break;
+            }
+        }
+    }
+    CGRect rect = self.searchBar.frame;
+    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height-2,rect.size.width, 2)];
+    lineView.backgroundColor = [Common getGray];
+    [self.searchBar addSubview:lineView];
 }
 
 /* This method loads the "user to display"'s profile picture and displays it as a circle. If the user doesn't have a profile picture yet, then it uses the "ADD PROFILE PICTURE" image as the profile pic image. When done, it enables the flip prof pic button if the user to display is the user that's currently logged in (i.e. if the user is viewing his/her own profile) */
@@ -213,7 +240,11 @@
 
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
     if (collectionView == self.likesCollectionView) {
-        return self.likes.count + 1; // + 1 for the "add likes"
+        if (self.userToDisplay == [PFUser currentUser]) {
+            return self.likes.count + 1; // + 1 for the "add likes," if this is the user's own profile
+        } else {
+            return self.likes.count;
+        }
     } else if (collectionView == self.chooseLikeCollectionView) {
         return self.likeOptions.count;
     } else {
@@ -232,16 +263,16 @@
         } else {
             likeString = [self.likes objectAtIndex:indexPath.item];
         }
-        [newCell setUpCellWithTitle:likeString setFilled:YES];
+        [newCell setUpCellWithTitle:likeString setFilled:YES isGray:YES];
         return newCell;
     } else if (collectionView == self.chooseLikeCollectionView) {
         LikeCollectionViewCell *newCell = [self.chooseLikeCollectionView dequeueReusableCellWithReuseIdentifier:@"chooseLikeCell"
                                                                                             forIndexPath:indexPath];
         NSString *likeString = [self.likeOptions objectAtIndex:indexPath.item];
         if ([self.editedLikes containsObject:likeString]) {
-            [newCell setUpCellWithTitle:likeString setFilled:YES];
+            [newCell setUpCellWithTitle:likeString setFilled:YES isGray:NO];
         } else {
-            [newCell setUpCellWithTitle:likeString setFilled:NO];
+            [newCell setUpCellWithTitle:likeString setFilled:NO isGray:NO];
         }
         return newCell;
     } else return nil;
@@ -259,7 +290,8 @@
             [self.view addSubview:self.translucentBlackButton];
             [self.view bringSubviewToFront:self.chooseLikesView];
             
-            self.likeOptions = [Common getAllLikeOptions];
+            self.allLikeOptions = [Common getAllLikeOptions];
+            self.likeOptions = [NSArray arrayWithArray:self.allLikeOptions];
             if (!self.editedLikes) {
                 self.editedLikes = [[NSMutableArray alloc] init];
             }
@@ -303,6 +335,51 @@
     self.chooseLikesView.hidden = YES;
     [self.translucentBlackButton removeFromSuperview];
 }
+
+#pragma mark - UISearchBar delegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(nonnull NSString *)searchText {
+    if (searchText.length == 0) {
+        self.likeOptions = self.allLikeOptions;
+    } else {
+        NSMutableArray *newLikes = [[NSMutableArray alloc] init];
+        for (NSString *string in self.allLikeOptions) {
+            if ([string containsString:searchText]) {
+                [newLikes addObject:string];
+            }
+        }
+        self.likeOptions = newLikes;
+    }
+    [self.chooseLikeCollectionView reloadData];
+}
+
+- (IBAction)switchedViewType:(id)sender {
+    if (self.viewTypeToggle.selectedSegmentIndex == 0) {
+        self.listTableView.hidden = NO;
+        self.mapView.hidden = YES;
+    } else {
+        self.mapView.hidden = NO;
+        self.listTableView.hidden = YES;
+    }
+}
+
+#pragma mark - Table View delegate and data source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    PlanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"planCell" forIndexPath:indexPath];
+//    DayPlan *planToShow = [self.plansToShow objectAtIndex:indexPath.row];
+//    [cell setUpCellWithPlan:planToShow];
+//    return cell;
+    return nil;
+}
+
 
 /*
 #pragma mark - Navigation

@@ -18,6 +18,8 @@
 + (int)getRandomNumberBetween:(int)from to:(int)to;
 /* Returns the navy-ish color used throughout the app */
 + (UIColor *)getNavy;
+/* Returns the gray-ish color used throughout the app */
++ (UIColor *)getGray;
 /* Returns a list of all options for likes */
 + (NSArray *)getAllLikeOptions;
 @end

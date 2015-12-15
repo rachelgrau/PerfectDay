@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2BA7581C1F8DFA0084CF31 /* grayCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2BA7571C1F8DFA0084CF31 /* grayCircle.png */; };
+		CC2BA75A1C1FA6DB0084CF31 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2BA7591C1FA6DB0084CF31 /* MapKit.framework */; };
 		CC2F2BF91C1F68DC00C7138A /* filledCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2F2BF81C1F68DC00C7138A /* filledCircle.png */; };
 		CC2F2BFB1C1F68E100C7138A /* outlineCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */; };
 		CC4B17AA1C1F3F4D005A7AD4 /* friendsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4B17A91C1F3F4D005A7AD4 /* friendsIcon.png */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC2BA7571C1F8DFA0084CF31 /* grayCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayCircle.png; sourceTree = "<group>"; };
+		CC2BA7591C1FA6DB0084CF31 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CC2F2BF81C1F68DC00C7138A /* filledCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledCircle.png; sourceTree = "<group>"; };
 		CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outlineCircle.png; sourceTree = "<group>"; };
 		CC4B17A91C1F3F4D005A7AD4 /* friendsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendsIcon.png; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2BA75A1C1FA6DB0084CF31 /* MapKit.framework in Frameworks */,
 				CC6690141C1552EE00944277 /* libsqlite3.tbd in Frameworks */,
 				CC6690121C1552E700944277 /* libz.tbd in Frameworks */,
 				CC6690101C1552E100944277 /* SystemConfiguration.framework in Frameworks */,
@@ -175,6 +180,7 @@
 			children = (
 				CC2F2BFA1C1F68E100C7138A /* outlineCircle.png */,
 				CC2F2BF81C1F68DC00C7138A /* filledCircle.png */,
+				CC2BA7571C1F8DFA0084CF31 /* grayCircle.png */,
 			);
 			name = likes;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 		CC6690151C1552F600944277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC2BA7591C1FA6DB0084CF31 /* MapKit.framework */,
 				CC6690131C1552EE00944277 /* libsqlite3.tbd */,
 				CC6690111C1552E700944277 /* libz.tbd */,
 				CC66900F1C1552E100944277 /* SystemConfiguration.framework */,
@@ -435,6 +442,7 @@
 				CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */,
 				CC668FBC1C14F9FF00944277 /* LaunchScreen.storyboard in Resources */,
 				CC2F2BFB1C1F68E100C7138A /* outlineCircle.png in Resources */,
+				CC2BA7581C1F8DFA0084CF31 /* grayCircle.png in Resources */,
 				CC668FB91C14F9FF00944277 /* Assets.xcassets in Resources */,
 				CC668FB41C14F9FF00944277 /* Main.storyboard in Resources */,
 				CC668FF11C150B6D00944277 /* grayBackButton.png in Resources */,

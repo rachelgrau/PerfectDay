@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LikeCollectionViewCell : UICollectionViewCell
-- (void) setUpCellWithTitle:(NSString *)title setFilled:(BOOL)filled;
+- (void) setUpCellWithTitle:(NSString *)title setFilled:(BOOL)filled isGray:(BOOL)gray;
 - (void) switchFilled;
 @end

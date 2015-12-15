@@ -16,10 +16,12 @@
 
 @implementation LikeCollectionViewCell
 
-- (void) setUpCellWithTitle:(NSString *)title setFilled:(BOOL)filled {
+- (void) setUpCellWithTitle:(NSString *)title setFilled:(BOOL)filled isGray:(BOOL)gray {
     self.filled = filled;
     self.likeLabel.text = title;
-    if (filled) {
+    if (gray) {
+        [self.imageView setImage:[UIImage imageNamed:@"grayCircle.png"]];
+    } else if (filled) {
         [self.imageView setImage:[UIImage imageNamed:@"filledCircle.png"]];
     } else {
         [self.imageView setImage:[UIImage imageNamed:@"outlineCircle.png"]];
