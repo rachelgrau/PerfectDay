@@ -25,4 +25,13 @@
     return self;
 }
 
+- (id) initWithCityName:(NSString *)cityName tags:(NSArray *)tags byCreator:(PFUser *)creator {
+    self = [super init];
+    if (self) {
+        self.creator = creator;
+        self.cityName = cityName;
+    }
+    return self;
+}
+
 @end

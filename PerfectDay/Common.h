@@ -22,4 +22,6 @@
 + (UIColor *)getGray;
 /* Returns a list of all options for likes */
 + (NSArray *)getAllLikeOptions;
+/* Given a date, returns a string of the form "2:30 PM" (h:mm a)*/
++ (NSString *)hourMinuteStringFromDate:(NSDate *)date;
 @end

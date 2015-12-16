@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import "LikeCollectionViewCell.h"
 #import "ChooseLikesView.h"
+#import "CreateDayViewController.h"
+#import "DayPlanViewController.h"
 #import "Common.h"
 #import "DBKeys.h"
 
@@ -38,9 +40,17 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 // Map View
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property CLGeocoder *geocoder;
 // List View
 @property (strong, nonatomic) IBOutlet UITableView *listTableView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *viewTypeToggle;
+// New perfect day
+@property (strong, nonatomic) IBOutlet UIButton *createPerfectDayButton;
+// Plans
+@property BOOL hasLoadedPlans;
+@property NSArray *dayPlans;
+@property PFObject *dayPlanSelected;
+@property NSIndexPath *indexPathSelected; // for day plan selected
 @end
 
 #define CHANGE_PROFILE_PIC_TAG 1
@@ -105,6 +115,80 @@
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, rect.size.height-2,rect.size.width, 2)];
     lineView.backgroundColor = [Common getGray];
     [self.searchBar addSubview:lineView];
+    
+    /* New perfect day */
+    [Common setBorder:self.createPerfectDayButton withColor:[Common getGray]];
+    
+    /* Load plans */
+    self.hasLoadedPlans = NO;
+    PFQuery *query = [PFQuery queryWithClassName:PLAN_CLASS_NAME];
+    [query whereKey:PLAN_CREATOR equalTo:self.userToDisplay];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *err) {
+        if (!err) {
+            self.dayPlans = array;
+        } else {
+            self.dayPlans = [[NSArray alloc] init];
+        }
+        self.hasLoadedPlans = YES;
+        [self setUpMapView];
+        [self.listTableView reloadData];
+    }];
+    self.listTableView.backgroundColor = [UIColor clearColor];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    if (self.dayPlanSelected) {
+        [self.listTableView deselectRowAtIndexPath:self.indexPathSelected animated:YES];
+        self.indexPathSelected = nil;
+    }
+}
+
+#pragma mark - MKMapView delegate
+
+/* Assuming this user's DayPlans have been loaded, sets up the map view with a pin for each of the user's plans. */
+- (void)setUpMapView {
+    for (PFObject *plan in self.dayPlans) {
+        NSString *cityName = [plan objectForKey:PLAN_CITY];
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        [geocoder geocodeAddressString:cityName
+                          completionHandler:^(NSArray* placemarks, NSError* error) {
+             MKPointAnnotation *ann = [[MKPointAnnotation alloc] init];
+             CLPlacemark *firstPlacemark = [placemarks objectAtIndex:0];
+             ann.coordinate = firstPlacemark.location.coordinate;
+             ann.title = cityName;
+                            
+             [self.mapView addAnnotation:ann];
+        }];
+    }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    annotationView.canShowCallout = YES;
+
+    /* Make the tag of the annotation view the index in self.dayPlans for this plan */
+    MKPointAnnotation *ann = (MKPointAnnotation *)annotation;
+    NSString *theTitle = ann.title;
+    NSInteger index = -1;
+    for (int i = 0; i < self.dayPlans.count; i++) {
+        PFObject *dayPlan = [self.dayPlans objectAtIndex:i];
+        if ([[dayPlan objectForKey:PLAN_CITY] isEqualToString:theTitle]) {
+            index = i;
+        }
+    }
+    annotationView.tag = index;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    self.dayPlanSelected = [self.dayPlans objectAtIndex:view.tag];
+    [self performSegueWithIdentifier:@"toDayPlan" sender:view];
 }
 
 /* This method loads the "user to display"'s profile picture and displays it as a circle. If the user doesn't have a profile picture yet, then it uses the "ADD PROFILE PICTURE" image as the profile pic image. When done, it enables the flip prof pic button if the user to display is the user that's currently logged in (i.e. if the user is viewing his/her own profile) */
@@ -364,31 +448,52 @@
 }
 
 #pragma mark - Table View delegate and data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    if (!self.hasLoadedPlans) {
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    if (!self.hasLoadedPlans) {
+        return 0;
+    } else {
+        return self.dayPlans.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    PlanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"planCell" forIndexPath:indexPath];
-//    DayPlan *planToShow = [self.plansToShow objectAtIndex:indexPath.row];
-//    [cell setUpCellWithPlan:planToShow];
-//    return cell;
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"planCell" forIndexPath:indexPath];
+    PFObject *dayPlan = [self.dayPlans objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dayPlan objectForKey:PLAN_CITY];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [Common getGray];
+    return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.listTableView) {
+        self.indexPathSelected = indexPath;
+        self.dayPlanSelected = [self.dayPlans objectAtIndex:indexPath.row];
+        [self performSegueWithIdentifier:@"toDayPlan" sender:self];
+    }
+}
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toCreateDay"]) {
+        CreateDayViewController *dest = segue.destinationViewController;
+        dest.creator = [PFUser currentUser];
+    } else if ([segue.identifier isEqualToString:@"toDayPlan"]) {
+        DayPlanViewController *dest = segue.destinationViewController;
+        dest.dayPlan = self.dayPlanSelected;
+    }
 }
-*/
+
 
 @end

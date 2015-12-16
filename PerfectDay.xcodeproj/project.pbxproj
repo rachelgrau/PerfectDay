@@ -48,9 +48,11 @@
 		CC6690141C1552EE00944277 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6690131C1552EE00944277 /* libsqlite3.tbd */; };
 		CC6690191C15597D00944277 /* mountainousBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6690181C15597D00944277 /* mountainousBackdrop.png */; };
 		CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66901C1C1559AD00944277 /* LogInViewController.m */; };
+		CC68CA1C1C2116F900C1AF5A /* DayPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC68CA1B1C2116F900C1AF5A /* DayPlanViewController.m */; };
 		CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */; };
 		CC8DF7C81C1E67F200D7BCF1 /* changeProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */; };
 		CC8DF7CA1C1E685400D7BCF1 /* addProfPic.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */; };
+		CC9561C11C20A82F00952D7B /* CreateDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9561C01C20A82F00952D7B /* CreateDayViewController.m */; };
 		CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBCB2BE1C1BE49E005A2DD7 /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -129,10 +131,14 @@
 		CC6690181C15597D00944277 /* mountainousBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountainousBackdrop.png; sourceTree = "<group>"; };
 		CC66901B1C1559AD00944277 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		CC66901C1C1559AD00944277 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		CC68CA1A1C2116F900C1AF5A /* DayPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayPlanViewController.h; sourceTree = "<group>"; };
+		CC68CA1B1C2116F900C1AF5A /* DayPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayPlanViewController.m; sourceTree = "<group>"; };
 		CC8DF7BC1C1E31BC00D7BCF1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CC8DF7BD1C1E31BC00D7BCF1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CC8DF7C61C1E67F200D7BCF1 /* changeProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeProfPic.png; sourceTree = "<group>"; };
 		CC8DF7C91C1E685400D7BCF1 /* addProfPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addProfPic.png; sourceTree = "<group>"; };
+		CC9561BF1C20A82F00952D7B /* CreateDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDayViewController.h; sourceTree = "<group>"; };
+		CC9561C01C20A82F00952D7B /* CreateDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDayViewController.m; sourceTree = "<group>"; };
 		CCBCB2BD1C1BE49E005A2DD7 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		CCBCB2BE1C1BE49E005A2DD7 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +244,10 @@
 				CC668FAC1C14F9FF00944277 /* AppDelegate.h */,
 				CC668FAD1C14F9FF00944277 /* AppDelegate.m */,
 				CC668FB21C14F9FF00944277 /* Main.storyboard */,
+				CC68CA1A1C2116F900C1AF5A /* DayPlanViewController.h */,
+				CC68CA1B1C2116F900C1AF5A /* DayPlanViewController.m */,
+				CC9561BF1C20A82F00952D7B /* CreateDayViewController.h */,
+				CC9561C01C20A82F00952D7B /* CreateDayViewController.m */,
 				CC668FB81C14F9FF00944277 /* Assets.xcassets */,
 				CC668FBA1C14F9FF00944277 /* LaunchScreen.storyboard */,
 				CC668FBD1C14F9FF00944277 /* Info.plist */,
@@ -483,11 +493,13 @@
 				CC668FEB1C15080800944277 /* BrowseViewController.m in Sources */,
 				CC668FFA1C151CFD00944277 /* PlanTableViewCell.m in Sources */,
 				CC66901D1C1559AD00944277 /* LogInViewController.m in Sources */,
+				CC9561C11C20A82F00952D7B /* CreateDayViewController.m in Sources */,
 				CCBCB2BF1C1BE49E005A2DD7 /* SignUpViewController.m in Sources */,
 				CC4B17B01C1F47A0005A7AD4 /* LikeCollectionViewCell.m in Sources */,
 				CC668FAB1C14F9FF00944277 /* main.m in Sources */,
 				CC8DF7BE1C1E31BC00D7BCF1 /* ProfileViewController.m in Sources */,
 				CC668FE11C14FA1900944277 /* HomeViewController.m in Sources */,
+				CC68CA1C1C2116F900C1AF5A /* DayPlanViewController.m in Sources */,
 				CC668FF51C150EB200944277 /* DayPlan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
